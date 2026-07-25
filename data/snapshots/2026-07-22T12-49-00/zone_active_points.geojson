@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "zone_active_points",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "lat": 44.89697, "lon": -1.03611, "frp": 83.34, "fetch_timestamp": "2026-07-22T12:49:00" }, "geometry": { "type": "Point", "coordinates": [ -1.03611, 44.89697 ] } },
+{ "type": "Feature", "properties": { "lat": 44.89782, "lon": -1.03115, "frp": 126.53, "fetch_timestamp": "2026-07-22T12:49:00" }, "geometry": { "type": "Point", "coordinates": [ -1.03115, 44.89782 ] } },
+{ "type": "Feature", "properties": { "lat": 44.90112, "lon": -1.03227, "frp": 48.27, "fetch_timestamp": "2026-07-22T12:49:00" }, "geometry": { "type": "Point", "coordinates": [ -1.03227, 44.90112 ] } },
+{ "type": "Feature", "properties": { "lat": 44.90197, "lon": -1.02732, "frp": 48.27, "fetch_timestamp": "2026-07-22T12:49:00" }, "geometry": { "type": "Point", "coordinates": [ -1.02732, 44.90197 ] } },
+{ "type": "Feature", "properties": { "lat": 44.90282, "lon": -1.02237, "frp": 19.33, "fetch_timestamp": "2026-07-22T12:49:00" }, "geometry": { "type": "Point", "coordinates": [ -1.02237, 44.90282 ] } }
+]
+}
