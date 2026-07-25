@@ -2,42 +2,15 @@
   "snapshots": [
     {
       "date": "2026-07-22",
-      "fetch_timestamp": "2026-07-25T11:43:01.458650",
-      "snapshot_id": "2026-07-22",
+      "fetch_timestamp": "2026-07-22T12:49:00",
+      "snapshot_id": "2026-07-22T12-49-00",
       "zone_brulee_geojson": null,
-      "zone_active_geojson": "data/snapshots/2026-07-22/zone_active.geojson",
+      "zone_active_geojson": "data/snapshots/2026-07-22T12-49-00/zone_active.geojson",
       "surface_brulee_ha": null,
       "nb_zones_actives": 1,
-      "source": "EFFIS modis.ba.poly.season + FIRMS VIIRS NOAA20/SNPP"
-    },
-    {
-      "date": "2026-07-23",
-      "fetch_timestamp": "2026-07-25T11:43:28.510478",
-      "snapshot_id": "2026-07-23",
-      "zone_brulee_geojson": null,
-      "zone_active_geojson": "data/snapshots/2026-07-23/zone_active.geojson",
-      "surface_brulee_ha": null,
-      "nb_zones_actives": 4,
-      "source": "EFFIS modis.ba.poly.season + FIRMS VIIRS NOAA20/SNPP"
-    },
-    {
-      "date": "2026-07-24",
-      "fetch_timestamp": "2026-07-25T11:44:03.522889",
-      "snapshot_id": "2026-07-24",
-      "zone_brulee_geojson": null,
-      "zone_active_geojson": "data/snapshots/2026-07-24/zone_active.geojson",
-      "surface_brulee_ha": null,
-      "nb_zones_actives": 51,
-      "source": "EFFIS modis.ba.poly.season + FIRMS VIIRS NOAA20/SNPP"
-    },
-    {
-      "date": "2026-07-25",
-      "fetch_timestamp": "2026-07-25T11:44:39.986594",
-      "snapshot_id": "2026-07-25",
-      "zone_brulee_geojson": "data/snapshots/2026-07-25/zone_brulee.geojson",
-      "zone_active_geojson": "data/snapshots/2026-07-25/zone_active.geojson",
-      "surface_brulee_ha": 18299.0,
-      "nb_zones_actives": 43,
+      "nb_detections_total": 8,
+      "frp_max": 126.53,
+      "derniere_detection": "2026-07-22T12:49:00",
       "source": "EFFIS modis.ba.poly.season + FIRMS VIIRS NOAA20/SNPP"
     }
   ]
