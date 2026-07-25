@@ -1,0 +1,6 @@
+map_key.txt
+__pycache__/
+*.pyc
+data/clc_cache.json
+data/commune_cache.json
+data/zoom_arcachon_dernier_run.json
