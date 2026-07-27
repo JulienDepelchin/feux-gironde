@@ -1,0 +1,32 @@
+name: Actualiser les snapshots feux Gironde
+
+on:
+  schedule:
+    - cron: "13 * * * *"  # toutes les heures a xh13 (decale de :00 pour eviter le pic de charge GitHub)
+  workflow_dispatch: {}   # permet de declencher un run manuel depuis l'onglet Actions (pour tester)
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dependances
+        run: pip install -r requirements.txt
+
+      - name: Configurer l'identite git (commits automatiques)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Reconstituer les nouveaux passages satellite (FIRMS + EFFIS si disponible)
+        env:
+          FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
+        run: python scripts/backfill_zone_active.py

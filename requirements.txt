@@ -1,0 +1,7 @@
+geopandas
+shapely
+scipy
+numpy
+pandas
+requests
+svgwrite
