@@ -142,6 +142,11 @@ def main(alpha=ALPHA_DEFAUT):
     passages = sorted(filtre_clc["acq_datetime"].unique())
     print(f"  {len(passages)} position(s) de slider identifiee(s) (un cran par acq_datetime distinct)")
 
+    # output/ n'est pas versionne (jamais commite sur le repo public) - sur un poste
+    # local il preexiste souvent d'un run precedent, mais sur un runner CI fraichement
+    # clone, le dossier n'existe pas encore.
+    zoom.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
     zone_active_path = zoom.OUTPUT_DIR / "zone_active.geojson"
     zone_active_points_path = zoom.OUTPUT_DIR / "zone_active_points.geojson"
     zone_brulee_path = zoom.OUTPUT_DIR / "zone_brulee.geojson"
