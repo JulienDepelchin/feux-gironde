@@ -32,6 +32,7 @@ Lancer une seule fois pour l'historique :
 """
 import sys
 from datetime import date as date_cls
+from datetime import datetime
 from datetime import timedelta
 from pathlib import Path
 
@@ -150,6 +151,20 @@ def main(alpha=ALPHA_DEFAUT):
     zone_active_path = zoom.OUTPUT_DIR / "zone_active.geojson"
     zone_active_points_path = zoom.OUTPUT_DIR / "zone_active_points.geojson"
     zone_brulee_path = zoom.OUTPUT_DIR / "zone_brulee.geojson"
+
+    # zone_brulee (EFFIS) : recuperee une seule fois ici pour le jour courant. Sans ce
+    # fetch, zone_brulee_path ne serait jamais rempli sur un runner CI (contrairement a
+    # un poste local ou un run manuel prealable de build_zoom_bassin_arcachon.py laissait
+    # le fichier deja present) - le manifest resterait fige sur la derniere zone_brulee
+    # archivee, meme si EFFIS a entre-temps rerepondu. Echec EFFIS tolere (pas bloquant
+    # pour l'archivage des passages FIRMS, cf. archive.archiver qui gere zone_brulee_path
+    # absent).
+    try:
+        zone_brulee_geom, _, cible_brulee = zoom.fetch_zone_brulee(reference_date=aujourdhui)
+        zoom.exporter_zone_brulee_geojson(zone_brulee_geom, cible_brulee, datetime.now(), zone_brulee_path)
+    except Exception as e:
+        print(f"  zone brulee (EFFIS) indisponible pour ce run ({e!r}) - "
+              "passages FIRMS archives sans zone_brulee.")
 
     for i, passage in enumerate(passages):
         fetch_timestamp = passage.to_pydatetime()
