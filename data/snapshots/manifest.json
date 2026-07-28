@@ -489,6 +489,20 @@
       "frp_max": 84.32,
       "derniere_detection": "2026-07-28T02:53:00",
       "source": "EFFIS modis.ba.poly.season + FIRMS VIIRS NOAA20/SNPP"
+    },
+    {
+      "date": "2026-07-28",
+      "fetch_timestamp": "2026-07-28T12:19:00",
+      "snapshot_id": "2026-07-28T12-19-00",
+      "zone_brulee_geojson": "data/snapshots/2026-07-28T12-19-00/zone_brulee.geojson",
+      "zone_active_geojson": "data/snapshots/2026-07-28T12-19-00/zone_active.geojson",
+      "zone_active_points_geojson": "data/snapshots/2026-07-28T12-19-00/zone_active_points.geojson",
+      "surface_brulee_ha": 37699.0,
+      "nb_zones_actives": 18,
+      "nb_detections_total": 79,
+      "frp_max": 288.9,
+      "derniere_detection": "2026-07-28T12:38:00",
+      "source": "EFFIS modis.ba.poly.season + FIRMS VIIRS NOAA20/SNPP"
     }
   ]
 }
